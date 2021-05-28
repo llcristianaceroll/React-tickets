@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+//import './App.css';
+import Form  from "./Form";
+
+const movies = [
+  {
+    name : "Avenger",
+    available : 5,
+  },
+  {
+    name : "Terminator",
+    available : 10,
+  },
+];
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  // <div className="App">
+  <div>
+      <h2>Peliculas</h2>
+      
+      {movies.map(movie =>(
+        <Form movie={movie}/>     
+           
+      ))}
+  </div>
+  // </div>
   );
 }
 
